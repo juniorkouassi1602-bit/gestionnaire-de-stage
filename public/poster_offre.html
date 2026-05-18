@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publier une Offre - Gestionnaire de Stage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            
+        }
+
+        .offer-container {
+            max-width: 700px;
+            margin: auto;
+            padding: 40px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .badge-active {
+            background-color: #e6fcf5;
+            color: #20c997;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        /* Inputs Gris Style Maquette */
+        .form-control, .form-select {
+            background-color: #f1f3f5;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 18px;
+            font-size: 0.95rem;
+        }
+
+        .form-control:focus {
+            background-color: #e9ecef;
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+            outline: none;
+        }
+
+        /* Section des avantages (Checkmarks de la maquette) */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .spec-item {
+            font-size: 0.85rem;
+            color: #495057;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-publish {
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-publish:hover {
+            background-color: #222;
+            transform: translateY(-2px);
+        }
+
+        .btn-cancel {
+            background-color: #f1f3f5;
+            color: #666;
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            width: 100%;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <div class="container justify-content-center">
+            
+            <!-- Conteneur des liens -->
+            <div class="d-flex align-items-center gap-2">
+                <a class="nav-link px-3 fw-semibold text-dark active" href="dashbord_e.html">Gérer Offres</a>
+                
+                
+                <!-- Bouton "Pilule" Noir -->
+                <a href="profil_e.html" class="btn btn-dark rounded-pill px-4 fw-bold ms-2 shadow-sm">
+                    Mon Profil
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="offer-container">
+            <div class="header-section">
+                <span class="badge-active">● Offre active</span>
+                <h2>Stage : [Intitulé du poste]</h2>
+                <p class="text-muted">Nouvelle annonce de stage</p>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Intitulé du poste</label>
+                    <input type="text" class="form-control" placeholder="Ex: Développeur Web Junior">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Rémunération par mois</label>
+                        <input type="text" class="form-control" placeholder="Ex: 800€">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Durée du stage</label>
+                        <select class="form-select">
+                            <option>2 mois</option>
+                            <option>4 mois</option>
+                            <option selected>6 mois</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label class="form-label">Détails rapides</label>
+                <div class="specs-grid">
+                    <div class="spec-item">✓ Poste basé à Lyon</div>
+                    <div class="spec-item">✓ Télétravail partiel</div>
+                    <div class="spec-item">✓ Compétences : React, Node</div>
+                    <div class="spec-item">✓ Framer development</div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Description détaillée des missions</label>
+                    <textarea class="form-control" rows="5" placeholder="Décrivez le contenu du stage..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-publish">Publier l'offre</button>
+                <button type="button" class="btn-cancel" onclick="history.back()">Fermer</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

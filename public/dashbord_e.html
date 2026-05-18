@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Offres - Dashboard Entreprise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+           
+        }
+
+        .header-section {
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn-add-offer {
+            background-color: #000;
+            color: #fff;
+            border-radius: 12px;
+            padding: 12px 25px;
+            font-weight: 600;
+            border: none;
+            transition: 0.2s;
+        }
+
+        .btn-add-offer:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Cartes d'offres NOIRES (Style Maquette) */
+        .offer-management-card {
+            background-color: #111;
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .offer-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .offer-date {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        /* Stats des candidatures */
+        .stat-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #aaa;
+            text-transform: uppercase;
+        }
+
+        .btn-view-apps {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn-view-apps:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+
+        .status-active {
+            color: #28a745;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+    </style>
+    
+
+<body>
+     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <div class="container justify-content-center">
+            
+            <!-- Conteneur des liens -->
+            <div class="d-flex align-items-center gap-2">
+                <a class="nav-link px-3 fw-semibold text-dark active" href="dashbord_e.html">Gérer Offres</a>
+                
+                
+                <!-- Bouton "Pilule" Noir -->
+                <a href="profil_e.html" class="btn btn-dark rounded-pill px-4 fw-bold ms-2 shadow-sm">
+                    Mon Profil
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container text-center mb-5">    
+        <h1 class="display-4 mt-4">Mes Offres de Stage</h1>
+        <p class="lead">Voici les offres de stage que vous avez postées.</p>
+    </div>
+
+    <div class="container">
+        <!-- En-tête du Dashboard -->
+        <div class="header-section d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="fw-bold h3 mb-1">Mes offres postées</h1>
+                <p class="text-muted small">Gérez vos annonces et suivez les candidatures en temps réel.</p>
+            </div>
+            <button class="btn-add-offer"  onclick="window.location.href='poster_offre.html'">+ Poster une offre</button>
+            
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <!-- Offre 1 -->
+                <div class="offer-management-card">
+                    <div class="offer-info">
+                        <span class="status-active">● OFFRE ACTIVE</span>
+                        <h3 class="mt-1">Stage : Développeur Web (Fullstack)</h3>
+                        <div class="offer-date">Postée le 15 Octobre 2023</div>
+
+                        <div class="d-flex gap-3">
+                            <div class="stat-badge">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Candidats</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 ">
+                        <div>
+                            <a href="candidature.html" class="btn-view-apps">Voir les candidatures</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Offre 2 -->
+                <div class="offer-management-card">
+                    <div class="offer-info">
+                        <span class="status-active">● OFFRE ACTIVE</span>
+                        <h3 class="mt-1">Stage : UI/UX Designer</h3>
+                        <div class="offer-date">Postée le 10 Octobre 2023</div>
+
+                        <div class="d-flex gap-3">
+                            <div class="stat-badge">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Candidats</span>
+                            </div>
+                            <div class="stat-badge">
+                                <span class="stat-number text-info">0</span>
+                                <span class="stat-label">Nouveaux</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 ">
+                        <div>
+                            <a href="#" class="btn-view-apps">Voir les candidatures</a>
+                        </div>
+                        <div>
+                            <a href="#" class="btn-view-apps">Modifier l'offre</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

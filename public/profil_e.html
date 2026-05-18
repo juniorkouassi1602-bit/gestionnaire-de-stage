@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Entreprise - Gestionnaire de Stage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; color: #000; padding-bottom: 50px; }
+        
+        /* En-tête avec bannière légère */
+        .profile-header {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 50px 0;
+            margin-bottom: 30px;
+        }
+
+        .company-logo {
+            width: 120px;
+            height: 120px;
+            background-color: #f0f2f5;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e9ecef;
+            overflow: hidden;
+        }
+
+        .company-logo img { width: 70%; height: auto; opacity: 0.5; }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f8f9fa;
+        }
+
+        .info-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #6c757d; font-weight: 700; margin-bottom: 4px; }
+        .info-value { font-size: 1rem; font-weight: 500; margin-bottom: 22px; color: #212529; }
+
+        /* Style spécifique pour le bouton Plaquette */
+        .btn-plaquette {
+            display: flex;
+            align-items: center;
+            padding: 18px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            width: 100%;
+            justify-content: center;
+        }
+        .btn-plaquette:hover { background-color: #333; color: #fff; transform: translateY(-2px); }
+
+        .btn-edit-outline {
+            border: 2px solid #000;
+            color: #000;
+            border-radius: 10px;
+            padding: 8px 20px;
+            font-weight: 600;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <div class="container justify-content-center">
+            
+            <!-- Conteneur des liens -->
+            <div class="d-flex align-items-center gap-2">
+                <a class="nav-link px-3 fw-semibold text-dark active" href="dashbord_e.html">Gérer Offres</a>
+                
+                
+                <!-- Bouton "Pilule" Noir -->
+                <a href="profil_e.html" class="btn btn-dark rounded-pill px-4 fw-bold ms-2 shadow-sm">
+                    Mon Profil
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+<div class="profile-header">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <!-- Logo Entreprise -->
+            <div class="company-logo me-4">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="#adb5bd"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm10 12h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>
+            </div>
+            <div>
+                <h1 class="fw-bold mb-1">Tech Solutions SAS</h1>
+                <p class="text-muted mb-0">Secteur : Informatique & Digital — Lyon (69)</p>
+            </div>
+            <div class="ms-auto">
+                <button class="btn-edit-outline">Modifier le profil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row g-4">
+        <!-- Colonne Gauche : Identité Légale -->
+        <div class="col-md-4">
+            <div class="profile-card">
+                <div class="section-title">Informations Légales</div>
+                
+                <div class="info-label">Numéro SIRET</div>
+                <div class="info-value">123 456 789 00012</div>
+                
+                <div class="info-label">Siège Social</div>
+                <div class="info-value">12 Rue de la Technologie, 69000 Lyon</div>
+                
+                <div class="info-label">Taille de l'entreprise</div>
+                <div class="info-value">50 - 200 employés</div>
+            </div>
+        </div>
+
+        <!-- Colonne Droite : Contact et Plaquette -->
+        <div class="col-md-8">
+            <div class="profile-card mb-4">
+                <div class="section-title">Contact Professionnel</div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-label">E-mail de contact</div>
+                        <div class="info-value">rh@techsolutions.fr</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-label">Téléphone</div>
+                        <div class="info-value">04 78 00 00 00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Plaquette conforme à la maquette -->
+            <div class="profile-card">
+                <div class="section-title">Présentation de l'entreprise</div>
+                <p class="text-muted small mb-4">
+                    Consultez notre plaquette commerciale pour découvrir nos projets, nos technologies et nos opportunités de carrière pour les stagiaires.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#" class="btn-plaquette">
+                            <svg width="20" height="20" class="me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Voir la Plaquette (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

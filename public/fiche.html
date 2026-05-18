@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails Candidat - Gestionnaire de Stage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #ffffff; font-family: 'Inter', sans-serif;  }
+        
+        .candidate-detail-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+        }
+
+        /* En-tête avec Avatar */
+        .candidate-profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .large-avatar {
+            width: 80px; height: 80px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.8rem; font-weight: 700;
+            margin: 0 auto 20px auto;
+        }
+
+        h1 { font-weight: 800; font-size: 2rem; margin-bottom: 5px; }
+        .candidate-subtitle { color: #6c757d; font-size: 1.1rem; margin-bottom: 30px; }
+
+        /* Grille d'informations style Maquette */
+        .info-card-grid {
+            background-color: #f0f2f5;
+            border-radius: 15px;
+            padding: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .info-label { font-size: 0.75rem; font-weight: 700; color: #adb5bd; text-transform: uppercase; margin-bottom: 2px; }
+        .info-data { font-weight: 600; color: #000; }
+
+        /* Bouton CV */
+        .btn-view-pdf {
+            background-color: #fff;
+            border: 2px solid #000;
+            color: #000;
+            border-radius: 12px;
+            padding: 15px;
+            width: 100%;
+            font-weight: 700;
+            display: flex;
+            align-items: center; justify-content: center;
+            text-decoration: none;
+            margin-bottom: 40px;
+            transition: 0.2s;
+        }
+        .btn-view-pdf:hover { background-color: #000; color: #fff; }
+
+        /* Actions finales */
+        .action-zone {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-accept-candidate {
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 60px;
+            font-weight: 700;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .btn-reject-candidate {
+            background-color: transparent;
+            color: #dc3545;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <div class="container justify-content-center">
+            
+            <!-- Conteneur des liens -->
+            <div class="d-flex align-items-center gap-2">
+                <a class="nav-link px-3 fw-semibold text-dark active" href="dashbord_e.html">Gérer Offres</a>
+                
+                
+                <!-- Bouton "Pilule" Noir -->
+                <a href="profil_e.html" class="btn btn-dark rounded-pill px-4 fw-bold ms-2 shadow-sm">
+                    Mon Profil
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+<div class="container mt-4">
+    <div class="candidate-detail-container">
+        
+        <div class="candidate-profile-header">
+            <div class="large-avatar">JD</div>
+            <h1>Jean Dupont</h1>
+            <div class="candidate-subtitle">Candidat pour : Développeur Web</div>
+        </div>
+
+        <!-- Informations extraites de la page Inscription Étudiant -->
+        <div class="info-card-grid">
+            <div>
+                <div class="info-label">E-mail universitaire</div>
+                <div class="info-data">jean.dupont@univ-lyon1.fr</div>
+            </div>
+            <div>
+                <div class="info-label">Téléphone</div>
+                <div class="info-data">06 12 34 56 78</div>
+            </div>
+            <div>
+                <div class="info-label">Formation</div>
+                <div class="info-data">Master 1 MIAGE</div>
+            </div>
+            <div>
+                <div class="info-label">Année d'étude</div>
+                <div class="info-data">Bac +4</div>
+            </div>
+        </div>
+
+        <!-- Accès au CV comme dans le Profil Étudiant de la maquette -->
+        <a href="#" class="btn-view-pdf">
+            <svg width="20" height="20" class="me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            Consulter le CV (PDF)
+        </a>
+        
+
+        <!-- Zone de décision -->
+        <div class="action-zone">
+            <button class="btn-accept-candidate">Accepter la candidature</button>
+            <button class="btn-reject-candidate">Refuser le candidat</button>
+        </div>
+
+    </div>
+    
+    <div class="text-center mt-4">
+        <button class="btn btn-link text-muted text-decoration-none" onclick="window.history.back()">← Retour à la liste</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de l'offre - Gestionnaire de Stage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; padding: 50px 0; }
+        
+        .details-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            text-align: center;
+        }
+
+        .header-logo { font-size: 0.9rem; color: #6c757d; margin-bottom: 30px; }
+        
+        .badge-active {
+            background-color: #e6fcf5;
+            color: #20c997;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-weight: 800; font-size: 2.2rem; margin-bottom: 10px; }
+        .company-name { color: #6c757d; font-size: 1.2rem; margin-bottom: 30px; }
+
+        .salary { font-size: 2.5rem; font-weight: 800; margin-bottom: 5px; }
+        .salary-sub { color: #adb5bd; font-size: 0.9rem; margin-bottom: 40px; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+
+        .info-item { display: flex; align-items: center; font-size: 0.95rem; font-weight: 500; }
+        .info-item svg { margin-right: 10px; color: #000; }
+
+        .btn-postuler {
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .btn-fermer {
+            background-color: transparent;
+            color: #6c757d;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 10px;
+            width: 100px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="details-container">
+        <!-- Header -->
+        
+
+        <span class="badge-active">● Offre active</span>
+
+        <h1>Stage : Développeur Web chez</h1>
+        <div class="company-name">[Nom Entreprise]</div>
+
+        <div class="salary">$8,000</div>
+        <div class="salary-sub">/Rémunération par mois (Optionnel)</div>
+
+        <!-- Liste des caractéristiques conforme à la maquette -->
+        <div class="info-grid">
+            <div class="info-item">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l2.351 2.35 5.257-5.257a.236.236 0 0 1 .018-.016z"/></svg>
+                Poste basé à Lyon
+            </div>
+            <div class="info-item">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l2.351 2.35 5.257-5.257a.236.236 0 0 1 .018-.016z"/></svg>
+                Unlimited requests
+            </div>
+            <div class="info-item">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l2.351 2.35 5.257-5.257a.236.236 0 0 1 .018-.016z"/></svg>
+                Durée : 6 mois
+            </div>
+            <div class="info-item">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l2.351 2.35 5.257-5.257a.236.236 0 0 1 .018-.016z"/></svg>
+                Framer development
+            </div>
+            <div class="info-item">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l2.351 2.35 5.257-5.257a.236.236 0 0 1 .018-.016z"/></svg>
+                Télétravail partiel
+            </div>
+            <div class="info-item">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l2.351 2.35 5.257-5.257a.236.236 0 0 1 .018-.016z"/></svg>
+                Adresse : exemple : 123 Rue de Paris, Lyon
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <p class="fw-bold mb-2">Compétences clés : <span class="fw-normal text-muted">React, Node.js</span></p>
+        </div>
+
+        <!-- Boutons conforme à la maquette -->
+        <div class="d-flex flex-column align-items-center">
+            <button class="btn-postuler" onclick="window.location.href='postuler.html'">Postuler</button>
+            <button class="btn-fermer" onclick="window.history.back()">Fermer</button>
+        </div>
+    </div>
+</div>
+
+</body>

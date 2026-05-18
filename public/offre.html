@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres de Stage - Gestionnaire de Stage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #ffffff; font-family: 'Inter', sans-serif; }
+        
+        /* Barre de recherche conforme à la maquette */
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+        .search-bar {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            padding: 15px 25px 15px 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            width: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 20px center;
+        }
+
+        .filter-badge {
+            background-color: #eee;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            color: #666;
+            margin-left: 10px;
+            border: none;
+        }
+
+        /* Cartes de stage NOIRES comme sur la maquette */
+        .stage-card {
+            background-color: #111; /* Noir profond */
+            color: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .stage-card:hover {
+            transform: scale(1.01);
+        }
+        .stage-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .stage-desc {
+            color: #aaa;
+            font-size: 0.9rem;
+            max-width: 70%;
+            line-height: 1.4;
+        }
+
+        .btn-details {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        .btn-details svg { margin-right: 8px; }
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <div class="container justify-content-center">
+            
+            <!-- Conteneur des liens -->
+            <div class="d-flex align-items-center gap-2">
+                <a class="nav-link px-3 fw-semibold text-dark active" href="offre.html">Offres</a>
+                <a class="nav-link px-3 fw-semibold text-secondary" href="statut.html">Candidature</a>                
+                <!-- Bouton "Pilule" Noir -->
+                <a href="profil_s.html" class="btn btn-dark rounded-pill px-4 fw-bold ms-2 shadow-sm">
+                    Mon Profil
+                </a>
+            </div>
+
+        </div>
+    </nav>
+<div class="container text-center mb-5 mt-4">    
+        <h1 class="display-4">Offres de Stage</h1>
+        <p class="lead">Découvrez les dernières offres de stage disponibles et trouvez l'opportunité qui vous correspond.</p>
+    </div>
+<div class="container">
+    <!-- Barre de Recherche & Filtres -->
+    <div class="search-container d-flex align-items-center">
+        <input type="text" class="search-bar" placeholder="Recherche un stage (poste, entreprise)...">
+        <div class="ms-3 d-none d-md-flex align-items-center">
+            <span class="small text-muted me-2">Filtrer par :</span>
+            <button class="filter-badge">Lieu, Durée, Secteur</button>
+        </div>
+    </div>
+
+    <!-- Liste des Stages -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            
+            <!-- Stage 1 -->
+            <div class="stage-card">
+                <div>
+                    <div class="stage-title">Stage : Développeur Web</div>
+                    <p class="stage-desc">
+                        Stage de durée de votre cursus. Vos missions incluent la conception de nouvelles fonctionnalités, 
+                        maintenance corrective et évolutive sur des technologies modernes.
+                    </p>
+                </div>
+                <button class="btn-details" onclick="window.location.href='detail.html'">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    Détails
+                </button>
+            </div>
+
+            <!-- Stage 2 (Copie pour l'exemple) -->
+            <div class="stage-card">
+                <div>
+                    <div class="stage-title">Stage : Développeur Web</div>
+                    <p class="stage-desc">
+                        Participez à la refonte de notre plateforme SaaS. Vous travaillerez en étroite collaboration avec 
+                        l'équipe produit et les designers UI/UX.
+                    </p>
+                </div>
+                <button class="btn-details" onclick="window.location.href='detail.html'">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    Détails
+                </button>
+            </div>
+
+            <!-- Stage 3 (Copie pour l'exemple) -->
+            <div class="stage-card">
+                <div>
+                    <div class="stage-title">Stage : Développeur Web</div>
+                    <p class="stage-desc">
+                        Rejoignez une startup en pleine croissance. Environnement agile, stack technique moderne 
+                        (React, Node.js) et forte autonomie.
+                    </p>
+                </div>
+                
+
+                <button class="btn-details">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    Détails
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
