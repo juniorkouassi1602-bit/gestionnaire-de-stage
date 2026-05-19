@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Profil - Gestionnaire de Stage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Import de la police Inter pour un look moderne proche de la maquette -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background-color: #f8f9fa; 
-            font-family: 'Inter', sans-serif; 
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
             color: #000;
             padding-bottom: 50px;
         }
+
         .profile-header {
             background-color: #fff;
             border-bottom: 1px solid #eee;
             padding: 40px 0;
             margin-bottom: 30px;
         }
+
         .profile-card {
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
             height: 100%;
         }
+
         .avatar-placeholder {
             width: 100px;
             height: 100px;
@@ -40,6 +43,7 @@
             color: #adb5bd;
             border: 1px solid #e9ecef;
         }
+
         .section-title {
             font-weight: 700;
             font-size: 1.1rem;
@@ -47,6 +51,7 @@
             display: flex;
             align-items: center;
         }
+
         .info-label {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -55,12 +60,14 @@
             font-weight: 600;
             margin-bottom: 3px;
         }
+
         .info-value {
             font-size: 1rem;
             font-weight: 500;
             margin-bottom: 20px;
             color: #212529;
         }
+
         .badge-skill {
             background-color: #f0f2f5;
             color: #000;
@@ -73,6 +80,7 @@
             margin-bottom: 8px;
             display: inline-block;
         }
+
         .btn-edit {
             background-color: #000;
             color: #fff;
@@ -82,8 +90,12 @@
             border: none;
             transition: 0.2s;
         }
-        .btn-edit:hover { background-color: #333; color: #fff; }
-        
+
+        .btn-edit:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
         .file-link {
             display: flex;
             align-items: center;
@@ -97,98 +109,116 @@
         }
     </style>
 </head>
+
 <body>
-      <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
         <div class="container justify-content-center">
-            
-            <!-- Conteneur des liens -->
             <div class="d-flex align-items-center gap-2">
                 <a class="nav-link px-3 fw-semibold text-dark active" href="offre.html">Offres</a>
-                <a class="nav-link px-3 fw-semibold text-secondary" href="statut.html">Candidature</a>                
-                <!-- Bouton "Pilule" Noir -->
+                <a class="nav-link px-3 fw-semibold text-secondary" href="statut.html">Candidature</a>
                 <a href="profil_s.html" class="btn btn-dark rounded-pill px-4 fw-bold ms-2 shadow-sm">
                     Mon Profil
                 </a>
             </div>
-
         </div>
     </nav>
 
-<!-- Header du Profil -->
-<div class="profile-header">
+    <div class="profile-header">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="avatar-placeholder me-4">JD</div>
+                <div>
+                    <h1 id="nom_complet" class="fw-bold mb-1">Chargement...</h1>
+                    <p class="text-muted mb-0">Étudiant — Espace Personnel</p>
+                </div>
+                <div class="ms-auto">
+                    <button class="btn-edit">Modifier le profil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="d-flex align-items-center">
-            <div class="avatar-placeholder me-4">JD</div>
-            <div>
-                <h1 id="user-name" class="fw-bold mb-1"></h1>
-                <p class="text-muted mb-0">Étudiant en Master 1 — Développement Web</p>
-            </div>
-            <div class="ms-auto">
-                <button class="btn-edit">Modifier le profil</button>
-            </div>
-        </div>
-    </div>
-</div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="profile-card">
+                    <div class="section-title" id="coordonnees">Coordonnées</div>
 
-<div class="container">
-    <div class="row g-4">
-        <!-- Colonne Gauche : Coordonnées -->
-        <div class="col-md-4">
-            <div class="profile-card">
-                <div class="section-title">Coordonnées</div>
-                
-                <div class="info-label">Email Universitaire</div>
-                <div class="info-value">jean.dupont@universite.fr</div>
-                
-                <div class="info-label">Téléphone</div>
-                <div class="info-value">06 12 34 56 78</div>
-                
-                <div class="info-label">Localisation</div>
-                <div class="info-value">Lyon, France</div>
-            </div>
-        </div>
+                    <div class="info-label">Email Universitaire</div>
+                    <div class="info-value" id="email">...</div>
 
-        <!-- Colonne Droite : Parcours et Documents -->
-        <div class="col-md-8">
-            <div class="profile-card mb-4">
-                <div class="section-title">Formation & Compétences</div>
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="info-label">Formation Actuelle</div>
-                        <div class="info-value">Master MIAGE</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-label">Année d'étude</div>
-                        <div class="info-value">M1 (Bac +4)</div>
-                    </div>
-                </div>
-
-                <div class="info-label mb-2">Compétences clés</div>
-                <div class="mb-3">
-                    <span class="badge-skill">React.js</span>
-                    <span class="badge-skill">Node.js</span>
-                    <span class="badge-skill">Bootstrap 5</span>
-                    <span class="badge-skill">UI Design</span>
+                    <div class="info-label">Téléphone</div>
+                    <div class="info-value" id="telephone">...</div>
                 </div>
             </div>
 
-            <div class="profile-card">
-                <div class="section-title">Documents joints</div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="#" class="file-link">
-                            <svg width="24" height="24" class="me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                            </svg>
-                            Mon CV (PDF)
-                        </a>
+            <div class="col-md-8">
+                <div class="profile-card mb-4">
+                    <div class="section-title">Formation & Académique</div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-label">Cursus / Formation</div>
+                            <div class="info-value" id="formation">...</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="info-label">Année d'étude</div>
+                            <div class="info-value" id="annee">...</div>
+                        </div>
+                    </div>
+
+                    <div class="info-label mb-2">Compétences clés</div>
+                    <div class="mb-3">
+                        <span class="badge-skill">React.js</span>
+                        <span class="badge-skill">Node.js</span>
+                        <span class="badge-skill">Bootstrap 5</span>
+                        <span class="badge-skill">UI Design</span>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="section-title">Documents joints</div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#" class="file-link">
+                                <svg width="24" height="24" class="me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                                Mon CV (PDF)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/profil-actuel')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Erreur HTTP : " + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Données reçues de MySQL :", data); // Permet de vérifier dans la console F12
+                    
+                    // Injection des données MySQL dans les ID correspondants
+                    document.getElementById('nom_complet').textContent = data.nom_etudiant + " " + data.prenom_etudiant;
+                    document.getElementById('email').textContent = data.email_academique;
+                    document.getElementById('telephone').textContent = data.num_telephone;
+                    document.getElementById('formation').textContent = data.formation_etudiant;
+                    document.getElementById('annee').textContent = data.année_etude;
+                })
+                .catch(err => {
+                    console.error("Erreur de récupération :", err);
+                    document.getElementById('nom_complet').textContent = "Erreur de chargement";
+                });
+        });
+    </script>
 </body>
+
 </html>

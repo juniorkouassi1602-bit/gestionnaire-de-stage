@@ -31,7 +31,7 @@ app.post("/etudiant-inscription", async (req, res) => {
 
     await db.query(sql, [nom_etudiant, prenom_etudiant, email_academique, num_telephone, année_etude, formation_etudiant, mdp_etudiant]);
     console.log(`✅ Inscription réussie pour : ${nom_etudiant} ${prenom_etudiant}`);
-    res.send("<h1>Succès !</h1><p>Ton compte a été créé avec succès.</p><a href='/'>Retour</a>");
+    res.redirect("/profil_s.html"); // Redirige vers le profil après inscription
 
   } catch (error) {
     console.error("❌ Erreur lors de l'insertion :", error);
